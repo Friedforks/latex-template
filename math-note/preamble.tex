@@ -621,7 +621,12 @@
 \newcommand{\qs}[2]{\begin{question}{#1}{}\protected@edef\@currentlabel{\csname thetcb@cnt@question\endcsname}#2\end{question}}
 \makeatother
 \newcommand{\pf}[2]{\begin{myproof}[#1]#2\end{myproof}}
-\newcommand{\nt}[1]{\begin{note}#1\end{note}}
+% Inline note heading with normal paragraph text, without a box or background.
+\newcommand{\nt}[1]{%
+    \par\addvspace{\smallskipamount}%
+    \noindent\textbf{Note.}\enspace #1\par
+    \addvspace{\smallskipamount}%
+}
 
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
 		\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
