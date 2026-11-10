@@ -72,40 +72,42 @@
 % }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% MORANDI PALETTE
+% CLEAR COLOR PALETTE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Muted accents; dark headings remain legible on lightly tinted backgrounds.
-\definecolor{morandiSlate}{HTML}{647681}
-\definecolor{morandiSage}{HTML}{737F70}
-\definecolor{morandiClay}{HTML}{A27E70}
-\definecolor{morandiMauve}{HTML}{8A7888}
-\definecolor{morandiSand}{HTML}{9B886D}
-\definecolor{morandiRose}{HTML}{A2787B}
-\definecolor{morandiInk}{HTML}{353938}
+% Distinct chromatic accents with light tints and high-contrast headings.
+\definecolor{mathBlue}{HTML}{2563EB}
+\definecolor{mathEmerald}{HTML}{15803D}
+\definecolor{mathOrange}{HTML}{EA580C}
+\definecolor{mathViolet}{HTML}{7C3AED}
+\definecolor{mathAmber}{HTML}{CA8A04}
+\definecolor{mathRose}{HTML}{E11D48}
+\definecolor{mathTeal}{HTML}{008A94}
+\definecolor{mathFuchsia}{HTML}{C026D3}
+\definecolor{mathInk}{HTML}{171717}
 
 % Keep existing color names available to documents using this preamble.
-\colorlet{doc}{morandiSlate}
-\colorlet{myg}{morandiSage}
-\colorlet{myb}{morandiSlate}
-\colorlet{myr}{morandiRose}
-\colorlet{myp}{morandiMauve}
-\colorlet{mygr}{morandiInk}
-\colorlet{myred}{morandiRose!80!black}
-\colorlet{myyellow}{morandiSand}
-\colorlet{notesgreen}{morandiSage}
-\colorlet{mytheorembg}{morandiSlate!8!white}
-\colorlet{mytheoremfr}{morandiSlate}
-\colorlet{mylemmabg}{morandiClay!8!white}
-\colorlet{mylemmafr}{morandiClay}
-\colorlet{mypropbg}{morandiSlate!8!white}
-\colorlet{mypropfr}{morandiSlate}
-\colorlet{myexamplebg}{morandiSage!8!white}
-\colorlet{myexamplefr}{morandiSage}
-\colorlet{myexampleti}{morandiSage!75!black}
-\colorlet{mydefinitbg}{morandiMauve!8!white}
-\colorlet{mydefinitfr}{morandiMauve}
-\colorlet{myexercisebg}{morandiSand!8!white}
-\colorlet{myexercisefg}{morandiSand}
+\colorlet{doc}{mathBlue}
+\colorlet{myg}{mathEmerald}
+\colorlet{myb}{mathBlue}
+\colorlet{myr}{mathRose}
+\colorlet{myp}{mathViolet}
+\colorlet{mygr}{mathInk}
+\colorlet{myred}{mathRose!80!black}
+\colorlet{myyellow}{mathAmber}
+\colorlet{notesgreen}{mathEmerald}
+\colorlet{mytheorembg}{mathBlue!8!white}
+\colorlet{mytheoremfr}{mathBlue}
+\colorlet{mylemmabg}{mathOrange!8!white}
+\colorlet{mylemmafr}{mathOrange}
+\colorlet{mypropbg}{mathTeal!8!white}
+\colorlet{mypropfr}{mathTeal}
+\colorlet{myexamplebg}{mathEmerald!8!white}
+\colorlet{myexamplefr}{mathEmerald}
+\colorlet{myexampleti}{mathEmerald!75!black}
+\colorlet{mydefinitbg}{mathViolet!8!white}
+\colorlet{mydefinitfr}{mathViolet}
+\colorlet{myexercisebg}{mathAmber!8!white}
+\colorlet{myexercisefg}{mathAmber}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SHARED ENVIRONMENT STYLE
@@ -124,8 +126,8 @@
     borderline west={2pt}{0pt}{#1},
     colback=#2,
     colframe=#1,
-    coltext=morandiInk,
-    coltitle=#1!75!black,
+    coltext=mathInk,
+    coltitle=#1!80!black,
     fonttitle=\bfseries\sffamily,
     fontupper=\normalfont,
     detach title,
@@ -149,9 +151,9 @@
 \newtcbtheorem[number within=chapter]{theorem}{Theorem}
   {mathnote statement={mytheoremfr}{mytheorembg}}{th}
 \newtcbtheorem[number within=section]{Corollary}{Corollary}
-  {mathnote statement={morandiMauve}{morandiMauve!8!white}}{th}
+  {mathnote statement={mathFuchsia}{mathFuchsia!8!white}}{th}
 \newtcbtheorem[number within=chapter]{corollary}{Corollary}
-  {mathnote statement={morandiMauve}{morandiMauve!8!white}}{th}
+  {mathnote statement={mathFuchsia}{mathFuchsia!8!white}}{th}
 \newtcbtheorem[number within=section]{Lemma}{Lemma}
   {mathnote statement={mylemmafr}{mylemmabg}}{th}
 \newtcbtheorem[number within=chapter]{lemma}{Lemma}
@@ -165,7 +167,7 @@
 \newtcbtheorem[number within=chapter]{prop}{Proposition}
   {mathnote statement={mypropfr}{mypropbg}}{th}
 \newtcbtheorem[number within=section]{claim}{Claim}
-  {mathnote statement={morandiSage}{morandiSage!8!white}}{th}
+  {mathnote statement={mathEmerald}{mathEmerald!8!white}}{th}
 \newtcbtheorem[number within=section]{Example}{Example}
   {mathnote statement={myexamplefr}{myexamplebg}}{ex}
 \newtcbtheorem[number within=chapter]{example}{Example}
@@ -175,17 +177,17 @@
 \newtcbtheorem[number within=chapter]{definition}{Definition}
   {mathnote statement={mydefinitfr}{mydefinitbg}}{def}
 \newtcbtheorem[number within=chapter]{wconc}{Wrong Concept}
-  {mathnote statement={morandiRose}{morandiRose!8!white}}{def}
+  {mathnote statement={mathRose}{mathRose!8!white}}{def}
 
 \newtcolorbox{Theoremcon}{mathnote box={mytheoremfr}{mytheorembg}}
 \newcounter{questioncounter}
 \counterwithin{questioncounter}{chapter}
 \newtcbtheorem[use counter=questioncounter]{question}{Question}
-  {mathnote statement={morandiSand}{morandiSand!8!white}}{def}
+  {mathnote statement={mathAmber}{mathAmber!8!white}}{def}
 \newtcbtheorem{qstion}{Question}
-  {mathnote statement={morandiSand}{morandiSand!8!white}}{def}
-\newtcolorbox{solution}{mathnote box={morandiSage}{morandiSage!8!white},title=Solution}
-\newtcolorbox{note}[1][]{mathnote box={morandiSand}{morandiSand!8!white},title=Note,#1}
+  {mathnote statement={mathAmber}{mathAmber!8!white}}{def}
+\newtcolorbox{solution}{mathnote box={mathEmerald}{mathEmerald!8!white},title=Solution}
+\newtcolorbox{note}[1][]{mathnote box={mathAmber}{mathAmber!8!white},title=Note,#1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SELF MADE COMMANDS
@@ -217,14 +219,13 @@
 }
 \newcommand{\getCurrentSectionNumber}{\getcurrentref{section}}
 \newenvironment{myproof}[1][\proofname]{%
-  \begin{tcolorbox}[mathnote box={morandiSlate}{morandiSlate!8!white},title={#1}]%
-  \pushQED{\qed}%
-}{\popQED\end{tcolorbox}}
+	\proof[\bfseries #1: ]%
+}{\endproof}
 
 \newcommand{\mclm}[2]{\begin{myclaim}[#1]#2\end{myclaim}}
 \providecommand{\claimname}{Claim}
 \newenvironment{myclaim}[1][\claimname]{%
-  \begin{tcolorbox}[mathnote box={morandiSage}{morandiSage!8!white},title={#1}]%
+  \begin{tcolorbox}[mathnote box={mathEmerald}{mathEmerald!8!white},title={#1}]%
 }{\end{tcolorbox}}
 \newenvironment{iclaim}[1][\claimname]{\begin{myclaim}[#1]}{\end{myclaim}}
 \newcommand{\iclm}[2]{\begin{iclaim}[#1]#2\end{iclaim}}
@@ -346,7 +347,7 @@
 }
 
 \NewDocumentCommand{\code}{m m m}{
-  \begin{tcolorbox}[mathnote box={morandiSlate}{morandiSlate!8!white},title={#1}]
+  \begin{tcolorbox}[mathnote box={mathBlue}{mathBlue!8!white},title={#1}]
     \begin{minted}{#2}
       #3
     \end{minted}
